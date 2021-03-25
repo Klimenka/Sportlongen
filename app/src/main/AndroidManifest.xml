@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="nl.klimenko.sportlongen">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Recommended for Android 9 (API level 28) and lower. -->
+    <!-- Required for Android 10 (API level 29) and higher. -->
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".ForgotPasswordActivity"
+            android:label="@string/title_activity_login"/>
+        <activity android:name=".LogoutActivity"
+            android:label="@string/logout"/>
+        <activity
+            android:name=".CreateProfileActivity4"
+            android:label="@string/create_your_profile" />
+        <activity
+            android:name=".CreateProfileActivity3"
+            android:label="@string/create_your_profile" />
+        <activity
+            android:name=".CreateProfileActivity2"
+            android:label="@string/create_your_profile" />
+        <activity
+            android:name=".PasswordActivity"
+            android:label="@string/create_an_account" />
+        <activity
+            android:name=".TermsActivity"
+            android:label="@string/terms_and_conditions" />
+        <activity
+            android:name=".CreateProfileActivity"
+            android:label="@string/create_your_profile" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/create_an_account" />
+        <activity
+            android:name=".GreetingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/profile" />
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/notifications" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/history" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".SummaryActivity"
+            android:label="@string/summary" />
+        <activity
+            android:name=".QuestionnaireActivity"
+            android:label="@string/questionnaire" />
+        <activity
+            android:name=".AsthmaAttackActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ChooseTrainingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/home" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".GoogleMapsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

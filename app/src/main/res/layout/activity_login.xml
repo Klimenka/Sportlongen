@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
+
+        <ImageView
+            android:id="@+id/background_login"
+            android:layout_width="514dp"
+            android:layout_height="770dp"
+            android:contentDescription="@string/background"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/login_background" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/login_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/colorWhite"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/login_to_your_account"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:id="@+id/error_bad_credentials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/email_and_or_password_are_incorrect_n_please_try_again"
+                    android:textAppearance="@style/Roboto16RegularRed"
+                    android:visibility="gone" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/prompt_email"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/Roboto14Black" />
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="279dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/example_mail_com"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="20dp"
+                    tools:ignore="Autofill,RtlSymmetry" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/password"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/Roboto14Black" />
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="279dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/password_placeholder"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@id/login"
+                    android:selectAllOnFocus="true"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="20dp"
+                    tools:ignore="Autofill,RtlSymmetry" />
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorLightOrange"
+                    android:nextFocusDown="@id/forgot_password_button"
+                    android:text="@string/login"
+                    android:textAppearance="@style/Roboto16RegularWhite"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <TextView
+                    android:id="@+id/forgot_password_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:nextFocusDown="@id/register"
+                    android:text="@string/forgot_your_password"
+                    android:textAppearance="@style/Roboto14Blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/don_t_have_an_account"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/Roboto14LightBlack" />
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorBlue"
+                    android:text="@string/register"
+                    android:textAppearance="@style/Roboto16RegularWhite"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/for_troubleshooting_contact"
+                        android:textAppearance="@style/Roboto12RegularGrey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/techsupport_group4_nl"
+                        android:textAppearance="@style/Roboto12Blue" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</RelativeLayout>

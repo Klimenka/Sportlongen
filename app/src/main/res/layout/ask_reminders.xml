@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        tools:context=".RemindersView">
+
+        <ImageView
+            android:id="@+id/ask_for_reminders_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/close"
+            android:src="@drawable/close_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ask_for_reminders_icon"
+            android:layout_width="123dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/reminder_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_close"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/ask_for_reminders_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/reminders_explanation"
+            android:textAppearance="@style/Roboto20Regular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_icon" />
+
+        <ImageView
+            android:id="@+id/ask_for_reminders_line1"
+            android:layout_width="90dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/line_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_explanation"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ask_for_reminders_checkbox_1_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_line1">
+
+            <CheckBox
+                android:id="@+id/ask_for_reminders_checkbox_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_1_text"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/Roboto16Regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ask_for_reminders_checkbox_2_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_checkbox_1_block">
+
+            <CheckBox
+                android:id="@+id/ask_for_reminders_checkbox_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_2_text"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/Roboto16Regular" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ask_for_reminders_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/checkboxes_hint"
+            android:textAppearance="@style/Roboto12Regular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_checkbox_2_block" />
+
+        <ImageView
+            android:id="@+id/ask_for_reminders_line2"
+            android:layout_width="90dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/line_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_hint"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ask_for_reminders_checkbox_3_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_line2">
+
+            <CheckBox
+                android:id="@+id/ask_for_reminders_checkbox_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkbox_3_text"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/Roboto16Regular" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ask_for_reminders_continue"
+            android:layout_width="204dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/continue_button"
+            android:scaleType="centerCrop"
+            android:src="@drawable/continue_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ask_for_reminders_checkbox_3_block" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

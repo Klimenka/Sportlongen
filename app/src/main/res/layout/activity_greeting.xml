@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GreetingActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/running_woman"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="215dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/sportlongen"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sportlongen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/signin_button"
+        android:layout_width="333dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/sign_in"
+        android:src="@drawable/signin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/terms_signin"
+        android:layout_width="333dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/terms_and_conditions_link"
+        android:src="@drawable/link_to_terms_of_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

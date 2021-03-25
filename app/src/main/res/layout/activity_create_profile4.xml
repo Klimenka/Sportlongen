@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLightGrey"
+        tools:context=".CreateProfileActivity">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/colorWhite"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/first_step"
+                    android:src="@drawable/loading_bar_4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/in_which_stage_of_asthma_are_you_in"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/Roboto16RegularGrey" />
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/i_m_not_sure"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/intermittent"
+
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mild_persistent"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moderate_persistent"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/severe_persistent"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:text="@string/consult_your_care_provider_if_you_don_t_know_it_and_change_it_later"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/Roboto16RegularGrey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/previous_button"
+                        android:layout_width="75dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/previous_button"
+                        android:src="@drawable/previous" />
+
+                    <ImageView
+                        android:id="@+id/next_button"
+                        android:layout_width="75dp"
+                        android:layout_height="28dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/next"
+                        android:src="@drawable/finish" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/loading_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</RelativeLayout>
+</ScrollView>

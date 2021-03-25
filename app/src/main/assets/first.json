@@ -1,0 +1,142 @@
+{
+  "patientId": 2,
+  "user": {
+    "userId": 2,
+    "email": "jose@doe.com",
+    "firstName": "Jose",
+    "surName": "Doe",
+    "password": "secret",
+    "gender": 1,
+    "birthday": "1960-05-15T00:00:00",
+    "role": 0
+  },
+  "height": 180,
+  "weight": 61.5,
+  "asthmaLevel": 10,
+  "careProviderId": 1,
+  "country": null,
+  "city": null,
+  "assignedExercises": [
+    {
+      "assignedExerciseId": 1,
+      "exerciseTypeId": 1,
+      "exerciseType": {
+        "exerciseTypeId": 1,
+        "title": "Running",
+        "description": "Running in an open enviroment",
+        "deletedAt": "2020-11-28T11:30:01.365Z"
+      },
+      "patientId": 2,
+      "maxDuration": "01:00:00",
+      "maxHeartRate": 150,
+      "maxPace": "5",
+      "maxAirpolution": 10,
+      "maxHumidity": 5,
+      "maxTemperature": 25,
+      "timesAWeek": 2
+    },
+    {
+      "assignedExerciseId": 2,
+      "exerciseTypeId": 2,
+      "exerciseType": {
+        "exerciseTypeId": 2,
+        "title": "Cycling",
+        "description": "Cycling in an open enviroment",
+        "deletedAt": null
+      },
+      "patientId": 2,
+      "maxDuration": "02:00:00",
+      "maxHeartRate": 180,
+      "maxPace": "7",
+      "maxAirpolution": 10,
+      "maxHumidity": 10,
+      "maxTemperature": 23,
+      "timesAWeek": 3
+    },
+    {
+      "assignedExerciseId": 3,
+      "exerciseTypeId": 3,
+      "exerciseType": {
+        "exerciseTypeId": 3,
+        "title": "Running",
+        "description": "Running in the gym",
+        "deletedAt": null
+      },
+      "patientId": 2,
+      "maxDuration": "01:30:00",
+      "maxHeartRate": 150,
+      "maxPace": "4",
+      "maxAirpolution": 10,
+      "maxHumidity": 10,
+      "maxTemperature": 19,
+      "timesAWeek": 4
+    }
+  ],
+  "completedExercisesThisWeek": [
+    {
+      "completedExerciseId": 1,
+      "exerciseTypeId": 1,
+      "exerciseType": {
+        "exerciseTypeId": 1,
+        "title": "Running",
+        "description": "Running in an open enviroment",
+        "deletedAt": "2020-11-28T12:11:50.083Z"
+      },
+      "patientId": 1,
+      "startDateTime": "2020-11-28T12:11:50.083Z",
+      "endDateTime": "2020-11-28T12:11:50.083Z",
+      "maxHeartrate": 156,
+      "minHeartrate": 67,
+      "avgHeartrate": 94,
+      "gpsDataId": "12",
+      "gpsData": {
+        "gpsDataId": "ca803d04-e50c-473e-b7a3-3324ba7736cd",
+        "locationPoints": [
+          {
+            "dateTime": "2020-09-20T12:04:30.0000000",
+            "latitude": 52.389153,
+            "longtitude": 4.611354
+          }
+        ]
+      },
+      "temperature": 25,
+      "humidity": 5,
+      "airpolution": 5,
+      "distance": 12.2,
+      "feedbackId": 1,
+      "feedback": {
+        "feedbackId": 1,
+        "careProviderId": 0,
+        "careProvider": {
+          "careProviderId": 1,
+          "user": {
+            "userId": 1,
+            "email": "john@doe.com",
+            "firstName": "John",
+            "surName": "Doe",
+            "password": "secret",
+            "gender": 0,
+            "birthday": "1999-12-20T00:00:00.0000000",
+            "role": 0
+          },
+          "jobTitle": "Lung Doctor"
+        },
+        "message": "When you are running think about your pace, because that has an major impact.",
+        "dateTime": "2020-11-28T12:11:50.083Z"
+      },
+      "exerciseLogs": [
+        {
+          "exerciseLogId": 1,
+          "completedExerciseId": 1,
+          "howFeel": 5,
+          "isAsthma": 5,
+          "isHayFever": 2,
+          "isLookingForward": 10,
+          "openReason": "5",
+          "heartrate": 150,
+          "dateTime": "2020-09-24T15:56:51.0000000"
+        }
+      ]
+    }
+  ]
+}

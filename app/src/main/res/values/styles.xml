@@ -1,0 +1,180 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorLightOrange</item>
+        <item name="colorPrimaryDark">@color/colorDarkOrange</item>
+        <item name="colorAccent">@color/colorLightOrange</item>
+        <item name="colorSecondary">@color/colorLightOrange</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="Roboto12RegularGrey" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:spacing">15sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto12Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:spacing">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto12Blue" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:spacing">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto14LightBlack" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:spacing">14sp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+    <style name="Roboto14Black" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:spacing">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto14White" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:spacing">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto14Blue" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:spacing">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto16RegularWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">20sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto16RegularGrey" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Roboto16RegularDarkOrange" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorDarkOrange</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">21sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Roboto16Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">25sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto16Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">25sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="Roboto16RegularRed" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:spacing">15sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Roboto20MediumLightOrange" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorLightOrange</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">26sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Roboto20Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">27sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto20BoldGrey" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">20sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+    <style name="Roboto20RegularGrey" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">26sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Roboto20RegularRed" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">26sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Roboto20Bold" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">20sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Roboto20BoldWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">24sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Roboto20BoldDarkOrange" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorDarkOrange</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:spacing">20sp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Roboto30MediumDarkOrange" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorDarkOrange</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:spacing">39sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Roboto30Regular" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:spacing">37sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+    <style name="Roboto45Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">45sp</item>
+        <item name="android:spacing">59sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="Roboto70Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">70sp</item>
+        <item name="android:spacing">99sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="Roboto80Medium" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:spacing">20sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="Til" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorDarkOrange</item>
+    </style>
+</resources>

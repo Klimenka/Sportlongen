@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/historyRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ProgressBar
+                    android:id="@+id/loading_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/historyRecyclerView"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/don_t_have_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:text="@string/you_don_t_have_any_activities_to_show_yet"
+                    android:textAppearance="@style/Roboto16Regular"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/error_occurred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:text="@string/a_network_error_occurred_please_try_again"
+                    android:textAppearance="@style/Roboto16RegularRed"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/try_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/error_occurred"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:text="@string/retry"
+                    android:textAppearance="@style/Roboto16RegularWhite"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/activity_base" />
+
+</FrameLayout>

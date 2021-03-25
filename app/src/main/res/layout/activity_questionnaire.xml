@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".QuestionnaireActivity">
+
+        <TextView
+            android:id="@+id/how_feel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/how_feel"
+            android:textAppearance="@style/Roboto20Bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:stepSize="1.00"
+            android:value="1.00"
+            android:valueFrom="0.00"
+            android:valueTo="2.00"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/how_feel_text" />
+
+        <LinearLayout
+            android:id="@+id/slider1_helpers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider1">
+
+            <TextView
+                android:id="@+id/slider1_bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bad" />
+
+            <TextView
+                android:id="@+id/slider1_so_so"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/so_so" />
+
+            <TextView
+                android:id="@+id/slider1_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/good" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/asthma_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/asthma"
+            android:textAppearance="@style/Roboto20Bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider1_helpers" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:stepSize="1.00"
+            android:value="1.00"
+            android:valueFrom="0.00"
+            android:valueTo="2.00"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/asthma_text" />
+
+        <LinearLayout
+            android:id="@+id/slider2_helpers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider2">
+
+            <TextView
+                android:id="@+id/slider2_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/yes" />
+
+            <TextView
+                android:id="@+id/slider2_so_so"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/so_so" />
+
+            <TextView
+                android:id="@+id/slider2_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hay_fever_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/hay_fever"
+            android:textAppearance="@style/Roboto20Bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider2_helpers" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:stepSize="1.00"
+            android:value="1.00"
+            android:valueFrom="0.00"
+            android:valueTo="2.00"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hay_fever_text" />
+
+        <LinearLayout
+            android:id="@+id/slider3_helpers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider3">
+
+            <TextView
+                android:id="@+id/slider3_bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bad" />
+
+            <TextView
+                android:id="@+id/slider3_so_so"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/so_so" />
+
+            <TextView
+                android:id="@+id/slider3_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/good" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/choose_symptoms_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/symptoms"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/Roboto16Regular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider3_helpers" />
+
+        <LinearLayout
+            android:id="@+id/choose_symptoms"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_symptoms_text">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:text="@string/choose_symptoms"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/Roboto16RegularGrey" />
+
+            <ImageView
+                android:id="@+id/drop_down_symptoms"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/drop_down"
+                android:scaleType="centerCrop"
+                android:src="@drawable/drop_down"
+                app:tint="@color/colorDarkOrange" />
+
+            <ImageView
+                android:id="@+id/drop_up_symptoms"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/drop_up"
+                android:scaleType="centerCrop"
+                android:src="@drawable/drop_up"
+                android:visibility="gone"
+                app:tint="@color/colorDarkOrange" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_symptoms"
+            tools:ignore="NestedScrolling" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/commentCard"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/colorWhite"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_symptoms">
+
+            <EditText
+                android:id="@+id/open_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/type_anything_if_you_want_to_share_it_with_your_care_provider"
+                tools:ignore="Autofill,TextFields" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/confirm_button"
+            android:layout_width="145dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/confirm"
+            android:scaleType="centerCrop"
+            android:src="@drawable/confirm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/commentCard" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

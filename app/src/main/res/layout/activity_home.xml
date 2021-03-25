@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".HomeActivity">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="514dp"
+                android:layout_height="770dp"
+                android:contentDescription="@string/background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstCard"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:layout_marginLeft="8.5dp"
+                android:layout_marginRight="8.5dp"
+                android:background="@color/colorWhite"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/greeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/hey_friend"
+                        android:textAppearance="@style/Roboto20MediumLightOrange" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/Roboto20Regular"
+                        android:text="@string/are_you_ready_for_your_exercises_nlet_s_start"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/conditionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/conditions_for_training"
+                            android:textAppearance="@style/Roboto20Regular" />
+
+                        <TextView
+                            android:id="@+id/condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/good"
+                            android:textAppearance="@style/Roboto30MediumDarkOrange" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:contentDescription="@string/what_means_conditions_for_an_exercise"
+                            app:srcCompat="@drawable/info" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageWeather"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="27dp"
+                        android:contentDescription="@string/weather_icon"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="57dp"
+                        android:textAppearance="@style/Roboto30Regular" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/secondCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.5dp"
+                android:layout_marginRight="8.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstCard">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="109dp"
+                    android:layout_height="109dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/humidityPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/percentage"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:indeterminateOnly="false"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/humidity"
+                            android:textAppearance="@style/Roboto16Regular" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="109dp"
+                    android:layout_height="109dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/pollenIndex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/pollen_risk"
+                            android:indeterminateOnly="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/pollen"
+                            android:textAppearance="@style/Roboto16Regular" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="109dp"
+                    android:layout_height="109dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/airQualityIndex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar3"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:indeterminateOnly="false"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/air_quality"
+                            android:textAppearance="@style/Roboto16Regular" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.5dp"
+                android:layout_marginTop="27dp"
+                android:text="@string/goals"
+                android:textAppearance="@style/Roboto20BoldDarkOrange"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondCard" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/assignedExercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.5dp"
+                android:layout_marginEnd="8.5dp"
+                android:background="@color/colorWhite"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goals">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/goalsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/recentActivities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.5dp"
+                android:layout_marginTop="27dp"
+                android:text="@string/recent_activities"
+                android:textAppearance="@style/Roboto20BoldDarkOrange"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assignedExercises" />
+
+            <TextView
+                android:id="@+id/don_t_have_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.5dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/you_don_t_have_any_activities_to_show_yet"
+                android:textAppearance="@style/Roboto16Regular"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recentActivities" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recentActivitiesView"
+                android:layout_width="match_parent"
+
+                android:layout_height="120dp"
+                android:background="@color/colorWhite"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recentActivities">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/recentActivityTypeIcon"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recentActivityDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Roboto16Regular" />
+
+                        <TextView
+                            android:id="@+id/recentActivityTimeSpan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Roboto16Regular" />
+
+                        <TextView
+                            android:id="@+id/recentActivityDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Roboto16Regular" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/recentDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/see_the_exercise"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/forward_arrow" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <include layout="@layout/activity_base" />
+
+    <ProgressBar
+        android:id="@+id/loading_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,1 @@
+This is an application for asthma patients helping them to do sport activities.

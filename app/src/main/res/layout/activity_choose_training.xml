@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            tools:context=".ChooseTrainingActivity">
+
+            <ImageView
+                android:id="@+id/plan_activity_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/close"
+                android:src="@drawable/close_24"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/plan_activity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plan_an_activity"
+                android:textAppearance="@style/Roboto20Bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_close" />
+
+            <TextView
+                android:id="@+id/plan_activity_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all"
+                android:textAppearance="@style/Roboto16Regular"
+                android:textStyle=""
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/plan_activity_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_see_all" />
+
+            <LinearLayout
+                android:id="@+id/plan_activity_recommended_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_recycler_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended_settings_from"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/care_provider"
+                    android:textAppearance="@style/Roboto16Regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_recommended_text">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duration"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:id="@+id/plan_activity_duration_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="@style/Roboto16Regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_duration">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/target_distance"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:id="@+id/plan_activity_distance_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="@style/Roboto16Regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_pace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_distance">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maximum_pace"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:id="@+id/plan_activity_pace_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="@style/Roboto16Regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_heart_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_pace">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maximum_heart_rate"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <TextView
+                    android:id="@+id/plan_activity_heart_rate_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="@style/Roboto16Regular" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/plan_activity_set_button"
+                android:layout_width="241dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/set_recommended"
+                android:scaleType="centerCrop"
+                android:src="@drawable/set_recommended"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_heart_rate" />
+
+            <LinearLayout
+                android:id="@+id/plan_activity_duration_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_set_button">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/duration_set"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <EditText
+                    android:id="@+id/plan_activity_duration_rec_set"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/minutes"
+                    android:inputType="number"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/Roboto16RegularGrey"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_distance_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_duration_set">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/target_distance_set"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <EditText
+                    android:id="@+id/plan_activity_distance_rec_set"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/km"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/Roboto16RegularGrey"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_pace_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_distance_set">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/max_pace"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <EditText
+                    android:id="@+id/plan_activity_pace_rec_set"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/min_km"
+                    android:inputType="time"
+                    android:maxLength="5"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/Roboto16RegularGrey"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan_activity_heart_rate_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_pace_set">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/max_heart_beat"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/Roboto16Regular" />
+
+                <EditText
+                    android:id="@+id/plan_activity_heart_rate_rec_set"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="@string/bpm"
+                    android:inputType="number"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/Roboto16RegularGrey"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/plan_activity_start_button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:contentDescription="@string/start"
+                android:focusable="true"
+                android:src="@drawable/start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plan_activity_heart_rate_set" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_planning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/colorDarkOrange"
+            android:indeterminate="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>

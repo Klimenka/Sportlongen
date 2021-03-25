@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Map -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/white_zone_short"
+            tools:context=".GoogleMapsActivity" />
+
+        <!-- Short white zone and long map -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/white_zone_short"
+            android:layout_width="match_parent"
+            android:layout_height="272dp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/duration_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activity_type_short"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+                    <TextView
+                        android:id="@+id/duration_counting_short"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:text="@string/_0_09_00"
+                        android:textAppearance="@style/Roboto70Medium" />
+
+                    <TextView
+                        android:id="@+id/duration_text_short"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/duration_set"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/other_features_short"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:baselineAligned="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/distance_counting_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0_00"
+
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/distance_text_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/distance"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/pace_counting_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0__00"
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/pace_text_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pace"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pulse_counting_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_"
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/pulse_text_short"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heart_rate"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Long white zone and short map -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/white_zone"
+            android:layout_width="match_parent"
+            android:layout_height="486dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/home_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="35dp"
+                    android:contentDescription="@string/home_button"
+                    android:src="@drawable/home"
+                    android:visibility="invisible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/asthma_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="37dp"
+                    android:contentDescription="@string/report_asthma"
+                    android:src="@drawable/asthma"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/settings"
+                    android:src="@drawable/settings"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/asthma_button">
+
+                    <TextView
+                        android:id="@+id/duration_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:textAppearance="@style/Roboto16RegularDarkOrange" />
+
+                    <TextView
+                        android:id="@+id/duration_counting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:text="@string/_0_09_00"
+                        android:textAppearance="@style/Roboto80Medium" />
+
+                    <TextView
+                        android:id="@+id/duration_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/duration_set"
+                        android:textAppearance="@style/Roboto16RegularGrey" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/other_features"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:baselineAligned="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/duration">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/distance_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:textAppearance="@style/Roboto16RegularDarkOrange" />
+
+                        <TextView
+                            android:id="@+id/distance_counting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0_00"
+
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/distance_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/km"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pace_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:textAppearance="@style/Roboto16RegularDarkOrange" />
+
+                        <TextView
+                            android:id="@+id/pace_counting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0__00"
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/pace_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/min_km"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/pulse_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:textAppearance="@style/Roboto16RegularDarkOrange" />
+
+                        <TextView
+                            android:id="@+id/pulse_counting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_"
+                            android:textAppearance="@style/Roboto45Medium" />
+
+                        <TextView
+                            android:id="@+id/pulse_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bpm"
+                            android:textAppearance="@style/Roboto16RegularGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/activity_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="@string/activity"
+                        android:textAppearance="@style/Roboto20Bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        tools:ignore="UselessLeaf" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@string/heart_rate_sensor_active"
+                            android:src="@drawable/heartrate"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@string/heart_rate_sensor_inactive"
+                            android:src="@drawable/heart_rate_inactive" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heart_rate"
+                            android:textAppearance="@style/Roboto12RegularGrey" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@string/gps_signal"
+                            android:src="@drawable/signal_cellular" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gps"
+                            android:textAppearance="@style/Roboto12RegularGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/pause_button"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="46dp"
+            android:contentDescription="@string/pause_exercise"
+            android:src="@drawable/pause"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/white_zone" />
+
+        <LinearLayout
+            android:id="@+id/pauseState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/white_zone">
+
+            <ImageView
+                android:id="@+id/continue_button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/continue_exercise"
+                android:src="@drawable/start" />
+
+            <ImageView
+                android:id="@+id/stop_button"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/finish_exercise"
+                android:src="@drawable/stop_activity" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:backgroundTint="@color/colorDarkOrange"
+        android:visibility="gone" />
+</RelativeLayout>
